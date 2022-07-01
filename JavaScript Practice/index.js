@@ -1,22 +1,65 @@
-// function isArray() {
-//   let i = prompt("please enter an array");
-//   return i[0] === "[" && i[i.length - 1] === "]" ? true : false;
-// }
-// alert(isArray());
+//1. isArray()
+function isArray(arr) {
+  const stringArr = JSON.stringify(arr);
+  return stringArr[0] === "[" && stringArr[stringArr.length - 1] === "]";
+}
+const testInput = [0, 1, 2];
+console.log(isArray(testInput));
+console.log(isArray(35));
 
+//2. joinArray()
+// 2.1. arr.join
 // function joinArray(arr) {
 //   return arr.join("$");
 // }
 // console.log(joinArray(["orange", "apple", "grape"]));
 
+// 2.2. arr.forEach
+// const joinArray = (arr) => {
+//   let sentence = "";
+//   arr.forEach((item, index) => {
+//     sentence += item;
+//     if (index !== arr.length - 1) sentence += "$";
+//   });
+//   return sentence;
+// };
+// console.log(joinArray(["orange", "apple", "grape"]));
+
+// 2.3. for loop
+// const joinArray = (arr) => {
+//   let sentence = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     sentence += arr[i];
+//     if (i !== arr.length - 1) sentence += "$";
+//   }
+//   return sentence;
+// };
+// console.log(joinArray(["orange", "apple", "grape"]));
+
+//3. find the index of a number
+// 3.1. for loop
 // const findIndex = (arr, num) => {
 //   for (let i = 0; i < arr.length; i++) {
 //     if (arr[i] === num) console.log(`Index of ${num} is ${i}`);
 //   }
 // };
-// findIndex([1, 2, 3, 4, 5], 5);
-// findIndex([1, 2, 3, 4, 5, 6], 2);
+// console.log(findIndex([1, 2, 3, 4, 5], 5));
+// console.log(findIndex([1, 2, 3, 4, 5, 6], 2));
 
+// 3.2. arr.forEach
+// const findIndex = (arr, num) => {
+//   let result;
+//   arr.forEach((item, index) => {
+//     if (item === num) {
+//       result = index;
+//     }
+//   });
+//   return `Index of ${num} is ${result}`;
+// };
+// console.log(findIndex([1, 2, 3, 4, 5], 5));
+// console.log(findIndex([1, 2, 3, 4, 5, 6], 2));
+
+//4. & 5. get sum or product of an array
 // const getSum = (arr) => arr.reduce((sum, current) => sum + current, 0);
 // const getProduct = (arr) =>
 //   arr.reduce((product, current) => product * current, 1);
@@ -25,6 +68,7 @@
 // console.log(getProduct([1, 2, 3, 4, 5]));
 // console.log(getProduct([2, 3]));
 
+//6. remove duplicate
 // const removeDuplicate = (arr) => {
 //   for (let i = 0; i < arr.length; i++) {
 //     for (let j = 0; j < i; j++) {
@@ -36,6 +80,7 @@
 // console.log(removeDuplicate([1, 1, 2, 3, 7, 7, 0]));
 // console.log(removeDuplicate(["Peter", "James", "Bob", "Peter"]));
 
+//7. find leap years
 // const findLeapYears = (a, b) => {
 //   let leapYears = [];
 //   for (let i = a; i <= b; i++) {
@@ -46,8 +91,9 @@
 // console.log(findLeapYears(2000, 2018));
 // console.log(findLeapYears(2013, 2015));
 
-const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 2) + fibonacci(n - 1));
-console.log(fibonacci(1));
-console.log(fibonacci(3));
-console.log(fibonacci(4));
-console.log(fibonacci(5));
+//8. find n-th index of fibonacci
+// const fibonacci = (n) => (n < 2 ? 1 : fibonacci(n - 2) + fibonacci(n - 1));
+// console.log(fibonacci(0));
+// console.log(fibonacci(3));
+// console.log(fibonacci(4));
+// console.log(fibonacci(5));

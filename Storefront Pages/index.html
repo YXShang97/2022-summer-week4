@@ -30,7 +30,7 @@
     <title>Storefront Pages</title>
   </head>
   <body>
-    <div class="fixed w-full">
+    <div class="fixed w-full z-50">
       <!-- Sign In -->
       <div
         class="bg-black text-white text-sm font-light flex justify-between px-8 py-2"
@@ -112,7 +112,7 @@
       </div>
     </div>
 
-    <main class="px-8 mt-16">
+    <main class="px-8 mt-16 overflow-x-hidden">
       <!-- Shop by category -->
       <div class="flex justify-between mb-4">
         <h2 class="text-2xl font-bold">Shop by Category</h2>
@@ -121,7 +121,9 @@
           <img src="./images/arrow_right.png" class="w-4 ml-1" />
         </a>
       </div>
-      <div class="grid grid-cols-5 gap-8">
+      <div
+        class="min-w-[1400px] md:w-full overflow-x-scroll grid grid-cols-5 gap-8 -z-50"
+      >
         <div
           class="bg-[url('./images/bottle.jpg')] bg-no-repeat bg-contain bg-center relative"
         >
@@ -218,7 +220,7 @@
           collection inspired by the natural world.
         </p>
       </div>
-      <div class="grid grid-rows-3 md:grid-cols-3 gap-8 mt-10">
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
         <div>
           <img
             src="./images/storage.jpg"
