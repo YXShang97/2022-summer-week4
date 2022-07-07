@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "425px",
+            // => @media (min-width: 640px) { ... }
+
+            md: "768px",
+            // => @media (min-width: 768px) { ... }
+
+            lg: "1068px",
+            // => @media (min-width: 1024px) { ... }
+
+            xl: "1280px",
+            // => @media (min-width: 1280px) { ... }
+
+            "2xl": "1536px",
+            // => @media (min-width: 1536px) { ... }
+          },
+        },
+      };
+    </script>
+    <title>Storefront Pages</title>
+  </head>
+  <body>
+    <div class="fixed w-full z-50">
+      <!-- Sign In -->
+      <div
+        class="bg-black text-white text-sm font-light flex justify-between px-8 py-2"
+      >
+        <a href="#" class="flex items-center"
+          >CAD<img src="./images/arrow_down.png" class="w-4 ml-2"
+        /></a>
+        <ul class="flex">
+          <li><a href="#" class="mr-6">Sign in</a></li>
+          <li><a href="#">Create an account</a></li>
+        </ul>
+      </div>
+      <!-- Navigation -->
+      <nav
+        class="bg-[#454746] bg-opacity-80 text-white text-sm font-light hidden md:flex items-center justify-between px-8 py-3"
+      >
+        <img src="./images/connection.png" class="w-8 mr-20" />
+        <ul class="flex">
+          <li><a href="#" class="mx-4">Women</a></li>
+          <li><a href="#" class="mx-4">Men</a></li>
+          <li><a href="#" class="mx-4">Company</a></li>
+          <li><a href="#" class="mx-4">Stores</a></li>
+        </ul>
+        <ul class="flex">
+          <li><a href="#" class="mr-6">Search</a></li>
+          <li><a href="#" class="mr-6">Help</a></li>
+          <li>
+            <a href="#" class="flex items-center"
+              ><img src="./images/handbag.png" class="w-4 mr-1" />0</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- Navigation for small screen -->
+      <nav
+        class="bg-[#454746] bg-opacity-80 px-8 flex justify-between items-center md:hidden"
+      >
+        <ul class="flex items-center">
+          <li>
+            <a href="#"><img src="./images/menu.png" class="w-6 mr-6" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/looking-into.png" class="w-6" /></a>
+          </li>
+        </ul>
+        <img src="./images/connection.png" class="w-8 py-2" />
+        <ul class="flex items-center">
+          <li>
+            <a href="#"
+              ><img src="./images/question_mark.png" class="w-5 mr-8"
+            /></a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center text-white"
+              ><img src="./images/handbag.png" class="w-5 mr-1" />0</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- New Arrivals -->
+    <div
+      class="bg-[url('./images/cta-sections.jpg')] w-full bg-no-repeat bg-center bg-cover h-[840px] -z-50"
+    >
+      <div
+        class="max-w-3xl mx-auto flex flex-col items-center h-full justify-end"
+      >
+        <h1 class="text-white text-6xl text-center font-bold mb-6">
+          New arrivals are here
+        </h1>
+        <p class="text-white text-xl font-light text-center leading-8 mb-6">
+          The new arrivals have, well, newly arrived. Check out the latest
+          options from our summer small-batch release while they're still in
+          stock.
+        </p>
+        <button class="bg-white rounded-md text-lg mb-56 py-3 px-8">
+          Shop New Arrivals
+        </button>
+      </div>
+    </div>
+
+    <main class="px-8 mt-16 overflow-x-hidden">
+      <!-- Shop by category -->
+      <div class="flex justify-between mb-4">
+        <h2 class="text-2xl font-bold">Shop by Category</h2>
+        <a href="#" class="text-indigo-600 text-md hidden md:flex items-center"
+          >Browse all categories
+          <img src="./images/arrow_right.png" class="w-4 ml-1" />
+        </a>
+      </div>
+      <div
+        class="min-w-[1400px] md:w-full overflow-x-scroll grid grid-cols-5 gap-8 -z-50"
+      >
+        <div
+          class="bg-[url('./images/bottle.jpg')] bg-no-repeat bg-contain bg-center relative"
+        >
+          <div
+            class="bg-gradient-to-t from-gray-900 to-zinc-200 opacity-40 rounded-lg w-auto h-[400px] flex flex-col justify-end pb-8 hover:opacity-20"
+          ></div>
+          <p
+            class="text-2xl text-white w-full text-center font-bold absolute bottom-8"
+          >
+            New Arrivals
+          </p>
+        </div>
+        <div
+          class="bg-[url('./images/pen.jpg')] bg-no-repeat bg-contain bg-center relative"
+        >
+          <div
+            class="bg-gradient-to-t from-gray-900 to-zinc-200 opacity-40 rounded-lg w-auto h-[400px] flex flex-col justify-end pb-8 hover:opacity-20"
+          ></div>
+          <p
+            class="text-2xl text-white text-center font-bold w-full absolute bottom-8"
+          >
+            Productivity
+          </p>
+        </div>
+        <div
+          class="bg-[url('./images/chair.jpg')] bg-no-repeat bg-contain bg-center relative"
+        >
+          <div
+            class="bg-gradient-to-t from-gray-900 to-zinc-200 opacity-40 rounded-lg w-auto h-[400px] flex flex-col justify-end pb-8 hover:opacity-20"
+          ></div>
+          <p
+            class="text-2xl text-white text-center font-bold w-full absolute bottom-8"
+          >
+            Workspace
+          </p>
+        </div>
+        <div
+          class="bg-[url('./images/clock.jpg')] bg-no-repeat bg-contain bg-center relative"
+        >
+          <div
+            class="bg-gradient-to-t from-gray-900 to-zinc-200 opacity-40 rounded-lg w-auto h-[400px] flex flex-col justify-end pb-8 hover:opacity-20"
+          ></div>
+          <p
+            class="text-2xl text-white text-center font-bold w-full absolute bottom-8"
+          >
+            Accessories
+          </p>
+        </div>
+        <div
+          class="bg-[url('./images/notebook.jpg')] bg-no-repeat bg-contain bg-center relative"
+        >
+          <div
+            class="bg-gradient-to-t from-gray-900 to-zinc-200 opacity-40 rounded-lg w-auto h-[400px] flex flex-col justify-end pb-8 hover:opacity-20"
+          ></div>
+          <p
+            class="text-2xl text-white text-center font-bold w-full absolute bottom-8"
+          >
+            Sale
+          </p>
+        </div>
+      </div>
+      <a
+        href="#"
+        class="text-indigo-600 text-md md:hidden flex items-center mt-4"
+        >Browse all categories
+        <img src="./images/arrow_right.png" class="w-4 ml-1" />
+      </a>
+      <!-- Level up your desk -->
+      <div
+        class="bg-[url('./images/cta-sections.jpg')] w-full bg-no-repeat bg-center bg-cover rounded-lg h-[600px] -z-50 mt-24 px-8"
+      >
+        <div
+          class="max-w-[680px] mx-auto flex flex-col items-center h-full justify-end"
+        >
+          <h1 class="text-white text-4xl font-bold mb-3">Level up your desk</h1>
+          <p class="text-white text-xl font-light text-center leading-8 mb-8">
+            Make your desk beautiful and organized. Post a picture to social
+            media and watch it ger more likes than life-changing announcements.
+            Reflect on the shallow nature of existence. At least you have a
+            really nice desk setup.
+          </p>
+          <button
+            class="bg-white rounded-md text-lg mb-40 py-3 px-8 w-full md:w-auto"
+          >
+            Shop Workspace
+          </button>
+        </div>
+      </div>
+      <!-- Shop by collection -->
+      <div class="mb-4 mt-16">
+        <h2 class="text-2xl font-bold mb-4">Shop by Collection</h2>
+        <p class="text-gray-500 text-lg">
+          Each season, we collaborate with world-class designers to create a
+          collection inspired by the natural world.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        <div>
+          <img
+            src="./images/storage.jpg"
+            class="h-[420px] object-cover object-left rounded-lg"
+          />
+          <h3 class="font-bold text-md mt-4 mb-2">Handcrafted Collection</h3>
+          <p class="text-gray-500 text-sm">
+            Keep your phone, keys, and wallet together, so you can lose
+            everything at once.
+          </p>
+        </div>
+        <div>
+          <img
+            src="./images/storage.jpg"
+            class="h-[420px] object-cover object-center rounded-lg"
+          />
+          <h3 class="font-bold text-md mt-4 mb-2">Organized Desk Collection</h3>
+          <p class="text-gray-500 text-sm">
+            The rest of the house will still be a mess, but your desk will look
+            great.
+          </p>
+        </div>
+        <div>
+          <img
+            src="./images/storage.jpg"
+            class="h-[420px] object-cover object-right rounded-lg"
+          />
+          <h3 class="font-bold text-md mt-4 mb-2">Focus Collection</h3>
+          <p class="text-gray-500 text-sm">
+            Be more productive than enterprise project managers with a single
+            piece of paper.
+          </p>
+        </div>
+      </div>
+      <!-- Simple productivity -->
+      <div
+        class="bg-[url('./images/cta-sections.jpg')] w-full px-8 bg-no-repeat bg-center bg-cover rounded-lg h-[540px] mt-24"
+      >
+        <div
+          class="max-w-[700px] mx-auto flex flex-col items-center h-full justify-end"
+        >
+          <h1 class="text-white text-4xl font-bold mb-3">
+            Simple productivity
+          </h1>
+          <p class="text-white text-xl font-light text-center leading-8 mb-8">
+            Endless tasks, limited hours, a single piece of paper. Not really a
+            haiku, but we're doing our best here. No kanban boards, burndown
+            charts, or tangled flowcharts with our Focus system. Just the
+            undeniable urge to fill empty circles.
+          </p>
+          <button
+            class="bg-white rounded-md text-lg mb-36 w-full md:w-auto py-3 px-8"
+          >
+            Shop Focus
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <div class="bg-[#111828] mt-24 px-8">
+      <div class="flex flex-col md:flex-row">
+        <!-- Directory -->
+        <div class="hidden md:w-2/3 md:grid grid-cols-4 py-20">
+          <ul class="text-slate-200 font-light">
+            <li class="py-2"><h4 class="text-white font-normal">Shop</h4></li>
+            <li class="py-2"><a href="#" class="hover:underline">Bags</a></li>
+            <li class="py-2"><a href="#" class="hover:underline">Tees</a></li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Objects</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Home Goods</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Accessories</a>
+            </li>
+          </ul>
+          <ul class="text-slate-200 font-light">
+            <li class="py-2">
+              <h4 class="text-white font-normal">Company</h4>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Who we are</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Sustainability</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Press</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Careers</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Terms & Conditions</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Privacy</a>
+            </li>
+          </ul>
+          <ul class="text-slate-200 font-light">
+            <li class="py-2">
+              <h4 class="text-white font-normal">Account</h4>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Manage Account</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Returns & Exchanges</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Redeem a Gift Card</a>
+            </li>
+          </ul>
+          <ul class="text-slate-200 font-light">
+            <li class="py-2">
+              <h4 class="text-white font-normal">Connect</h4>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Contact Us</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Twitter</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Instagram</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Pinterest</a>
+            </li>
+          </ul>
+        </div>
+        <!-- directory for small screen -->
+        <div class="md:hidden w-full grid grid-cols-2 pt-20">
+          <ul class="text-slate-200 font-light">
+            <li class="py-2"><h4 class="text-white font-normal">Shop</h4></li>
+            <li class="py-2"><a href="#" class="hover:underline">Bags</a></li>
+            <li class="py-2"><a href="#" class="hover:underline">Tees</a></li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Objects</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Home Goods</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Accessories</a>
+            </li>
+            <li class="py-2 mt-8">
+              <h4 class="text-white font-normal">Company</h4>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Who we are</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Sustainability</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Press</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Careers</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Terms & Conditions</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Privacy</a>
+            </li>
+          </ul>
+          <ul class="text-slate-200 font-light">
+            <li class="py-2">
+              <h4 class="text-white font-normal">Account</h4>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Manage Account</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Returns & Exchanges</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Redeem a Gift Card</a>
+            </li>
+            <li class="py-2 mt-8">
+              <h4 class="text-white font-normal">Connect</h4>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Contact Us</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Twitter</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Instagram</a>
+            </li>
+            <li class="py-2">
+              <a href="#" class="hover:underline">Pinterest</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Sign up -->
+        <div class="w-full md:w-1/3 py-20">
+          <h4 class="text-white font-normal mb-6">
+            Sign up for our newsletter
+          </h4>
+          <p class="text-slate-200 font-light text-md">
+            The latest deals and savings, sent to your inbox weekly.
+          </p>
+          <form class="mt-2 w-full">
+            <input type="text" class="rounded-md text-md py-2 mr-4" />
+            <input
+              type="submit"
+              value="Sign up"
+              class="bg-indigo-600 rounded-md text-white text-md py-2 px-4 mt-2"
+            />
+          </form>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <hr class="" />
+      <p class="text-gray-400 font-light text-md py-6">
+        Copyright © 2021 Clothing Company Inc.
+      </p>
+    </div>
+  </body>
+</html>
